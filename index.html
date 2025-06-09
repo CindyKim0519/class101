@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>결제 목록</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+<body>
+    <header class="header d-flex align-items-center justify-content-between px-3 py-2 border-bottom bg-white">
+        <img src="" alt="">
+        <div class="d-flex align-items-center">
+            <span>관리자</span>
+            <span class="mid-gray-color me-3">님 환영합니다</span>
+            <button class="btn btn-sm btn-outline-dark d-flex align-items-center">
+                <i class="fa-solid fa-arrow-right-from-bracket me-1"></i>
+                <span>로그아웃</span>
+            </button>
+        </div>
+    </header>
+    <div class="d-flex">
+        <nav class="sidebar bg-white border-end">
+            <div class="nav flex-column">
+                <a href="#!" class="nav-link py-3 px-4 text-dark d-flex align-items-center mid-gray-color">
+                    <i class="fa-solid fa-chart-simple me-2"></i>
+                    대시보드
+                </a>
+                <a href="#!" class="nav-link py-3 px-4 text-dark d-flex align-items-center mid-gray-color">
+                    <i class="fa-solid fa-desktop me-2"></i>
+                    클래스 관리
+                </a>
+                <a href="#!" class="nav-link py-3 px-4 text-dark d-flex align-items-center mid-gray-color">
+                    <i class="fa-solid fa-credit-card me-2"></i>
+                    결제 관리
+                </a>
+                <a href="#!" class="nav-link py-3 px-4 text-dark d-flex align-items-center mid-gray-color">
+                    <i class="fa-solid fa-user me-2"></i>
+                    회원 관리
+                </a>
+                <a href="#!" class="nav-link py-3 px-4 text-dark d-flex align-items-center mid-gray-color">
+                    <i class="fa-solid fa-video me-2"></i>
+                    콘텐츠 관리
+                </a>
+                <a href="#!" class="nav-link py-3 px-4 text-dark d-flex align-items-center mid-gray-color">
+                    <i class="fa-solid fa-rectangle-ad me-2"></i>
+                    프로모션 관리
+                </a>
+                <a href="#!" class="nav-link py-3 px-4 text-dark d-flex align-items-center mid-gray-color">
+                    <i class="fa-solid fa-gear me-2"></i>
+                    설정
+                </a>
+            </div>
+        </nav>
+    </div>
+    <main class="main-content px-4 py-4">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="#!">
+                    <i class="fa-solid fa-house text-secondary" width="18" height="18"></i>
+                </a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="#!" class="text-decoration-none text-secondary">결제 관리</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="#!" class="breadcrumb-item active text-decoration-none">
+                    결제 관리 목록
+                </a>
+            </li>
+        </ol>
+        <h2 class="mb-1 fw-bold mb-4">결제 목록</h2>
+        <div class="card">
+            <div class="card-body px-3 py-2">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div>
+                        <span>전체</span>
+                        <span class="fw-bold">84</span>
+                        <span>건</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <div class="search">
+                            <input type="text" class="form-control" placeholder="사용자명, 전화번호, 클래스명 찾기">
+                            <button class="btn btn-search border-0">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </div>
+                        <select class="form-select">
+                            <option value="전체">전체</option>
+                            <option value="결제 완료">결제 완료</option>
+                            <option value="결제 취소 요청">결제 취소 요청</option>
+                            <option value="결제 취소 거절">결제 취소 거절</option>
+                            <option value="결제 취소 완료">결제 취소 완료</option>
+                        </select>
+                        <select class="form-select">
+                            <option value="10건">10건</option>
+                            <option value="10건">50건</option>
+                            <option value="10건">100건</option>
+                        </select>
+                    </div>
+                </div>
+                <table class="table mt-3">
+                    <colgroup>
+                        <col style="width: 15%;">
+                        <col style="width: 15%;">
+                        <col style="width: 13%;">
+                        <col style="width: 20%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                    </colgroup>
+                    <thead>
+                        <tr class="font-size-sm">
+                            <th class="fw-normal dark-gray-color th-border-bottom">결제 번호</th>
+                            <th class="fw-normal dark-gray-color th-border-bottom">고객정보</th>
+                            <th class="fw-normal dark-gray-color th-border-bottom">상태</th>
+                            <th class="fw-normal dark-gray-color th-border-bottom">클래스 정보</th>
+                            <th class="fw-normal dark-gray-color th-border-bottom text-end">결제 금액</th>
+                            <th class="fw-normal dark-gray-color th-border-bottom text-center">결제일</th>
+                        </tr>
+                    </thead>
+                    <tbody class="align-middle">
+                        <tr>
+                            <td>
+                                <a href="#!" class="text-decoration-none">P20250531-0041</a>
+                            </td>
+                            <td>
+                                <div class="d-flex flex-column">
+                                    <span>홍길동</span>
+                                    <span class="text-secondary">010-1234-5678</span>
+                                </div>
+                            </td>
+                            <td>결제완료</td>
+                            <td>
+                                <div class="d-flex flex-column">
+                                    <span>드로잉 마스터 클래스</span>
+                                    <span class="text-secondary">평생 소장</span>
+                                </div>
+                            </td>
+                            <td class="text-end">120,000원</td>
+                            <td class="text-center">2025.05.31</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="#!" class="text-decoration-none">P20250531-0040</a>
+                            </td>
+                            <td>
+                                <div class="d-flex flex-column">
+                                    <span>김민지</span>
+                                    <span class="text-secondary">010-8765-4321</span>
+                                </div>
+                            </td>
+                            <td>결제 취소 요청</td>
+                            <td>
+                                <div class="d-flex flex-column">
+                                    <span>부업으로 시작하는 스마트스토어</span>
+                                    <span class="text-secondary">5개월 수강</span>
+                                </div>
+                            </td>
+                            <td class="text-end">89,000원</td>
+                            <td class="text-center">2025.05.31</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="#!" class="text-decoration-none">P20250531-0039</a>
+                            </td>
+                            <td>
+                                <div class="d-flex flex-column">
+                                    <span>이철수</span>
+                                    <span class="text-secondary">010-2468-1357</span>
+                                </div>
+                            </td>
+                            <td>결제 취소 완료</td>
+                            <td>
+                                <div class="d-flex flex-column">
+                                    <span>월간 구독</span>
+                                    <span class="text-secondary">구독으로 시작하기</span>
+                                </div>
+                            </td>
+                            <td class="text-end">19,000원</td>
+                            <td class="text-center">2025.05.31</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="#!" class="text-decoration-none">P20250531-0038</a>
+                            </td>
+                            <td>
+                                <div class="d-flex flex-column">
+                                    <span>박지윤</span>
+                                    <span class="text-secondary">010-1122-3344</span>
+                                </div>
+                            </td>
+                            <td>결제 완료</td>
+                            <td>
+                                <div class="d-flex flex-column">
+                                    <span>손글씨 캘리그라피 기초</span>
+                                    <span class="text-secondary">5개월 수강</span>
+                                </div>
+                            </td>
+                            <td class="text-end">49,000원</td>
+                            <td class="text-center">2025.05.31</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="#!" class="text-decoration-none">P20250531-0037</a>
+                            </td>
+                            <td>
+                                <div class="d-flex flex-column">
+                                    <span>최우진</span>
+                                    <span class="text-secondary">010-6677-8899</span>
+                                </div>
+                            </td>
+                            <td>결제 취소 거절</td>
+                            <td>
+                                <div class="d-flex flex-column">
+                                    <span>내 손으로 만드는 반려동물 인형</span>
+                                    <span class="text-secondary">평생 소장</span>
+                                </div>
+                            </td>
+                            <td class="text-end">99,000원</td>
+                            <td class="text-center">2025.05.31</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="#!" class="text-decoration-none">P20250531-0036</a>
+                            </td>
+                            <td>
+                                <div class="d-flex flex-column">
+                                    <span>정소라</span>
+                                    <span class="text-secondary">010-5555-6666</span>
+                                </div>
+                            </td>
+                            <td>결제 완료</td>
+                            <td>
+                                <div class="d-flex flex-column">
+                                    <span>연간 구독</span>
+                                    <span class="text-secondary">구독으로 시작하기</span>
+                                </div>
+                            </td>
+                            <td class="text-end">199,000원</td>
+                            <td class="text-center">2025.05.31</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="#!" class="text-decoration-none">P20250531-0035</a>
+                            </td>
+                            <td>
+                                <div class="d-flex flex-column">
+                                    <span>한지훈</span>
+                                    <span class="text-secondary">010-3333-2222</span>
+                                </div>
+                            </td>
+                            <td>결제 완료</td>
+                            <td>
+                                <div class="d-flex flex-column">
+                                    <span>크리에이티브 글쓰기 워크숍</span>
+                                    <span class="text-secondary">5개월 수강</span>
+                                </div>
+                            </td>
+                            <td class="text-end">59,000원</td>
+                            <td class="text-center">2025.05.31</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="#!" class="text-decoration-none">P20250531-0034</a>
+                            </td>
+                            <td>
+                                <div class="d-flex flex-column">
+                                    <span>유다인</span>
+                                    <span class="text-secondary">010-4444-7777</span>
+                                </div>
+                            </td>
+                            <td>결제 취소 요청</td>
+                            <td>
+                                <div class="d-flex flex-column">
+                                    <span>월간 구독</span>
+                                    <span class="text-secondary">구독으로 시작하기</span>
+                                </div>
+                            </td>
+                            <td class="text-end">19,000원</td>
+                            <td class="text-center">2025.05.31</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="#!" class="text-decoration-none">P20250531-0033</a>
+                            </td>
+                            <td>
+                                <div class="d-flex flex-column">
+                                    <span>오세훈</span>
+                                    <span class="text-secondary">010-9988-7766</span>
+                                </div>
+                            </td>
+                            <td>결제 완료</td>
+                            <td>
+                                <div class="d-flex flex-column">
+                                    <span>3D 프린팅으로 소품 만들기</span>
+                                    <span class="text-secondary">평생 소장</span>
+                                </div>
+                            </td>
+                            <td class="text-end">110,000원</td>
+                            <td class="text-center">2025.05.31</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="#!" class="text-decoration-none">P20250531-0032</a>
+                            </td>
+                            <td>
+                                <div class="d-flex flex-column">
+                                    <span>김하늘</span>
+                                    <span class="text-secondary">010-2233-4455</span>
+                                </div>
+                            </td>
+                            <td>결제 취소 완료</td>
+                            <td>
+                                <div class="d-flex flex-column">
+                                    <span>자기계발을 위한 명상 클래스</span>
+                                    <span class="text-secondary">5개월 수강</span>
+                                </div>
+                            </td>
+                            <td class="text-end">69,000원</td>
+                            <td class="text-center">2025.05.31</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="d-flex align-items-center justify-content-center gap-1">
+                    <button class="pagination-btn text-secondary"><i class="fa-solid fa-chevron-left"></i></button>
+                    <a href="#!" class="pagination-number bg-white d-flex align-items-center justify-content-center text-decoration-none active text-dark">1</a>
+                    <a href="#!" class="bg-white d-flex align-items-center justify-content-center text-decoration-none pagination-number text-dark">2</a>
+                    <a href="#!" class="bg-white d-flex align-items-center justify-content-center text-decoration-none pagination-number text-dark">3</a>
+                    <a href="#!" class="bg-white d-flex align-items-center justify-content-center text-decoration-none pagination-number text-dark">4</a>
+                    <span class="pagination-number bg-white d-flex align-items-center justify-content-center">...</span>
+                    <a href="#!" class="bg-white d-flex align-items-center justify-content-center text-decoration-none pagination-number text-dark">12</a>
+                    <button class="pagination-btn"><i class="fa-solid fa-chevron-right text-dark text-dark"></i></button>
+                </div>
+            </div>
+        </div>
+    </main>    
+    <script src="./vendors/jquery-3.7.1/jquery-3.7.1.js"></script>
+    <script src="./vendors/bootstrap5/js/bootstrap.bundle.js"></script>
+    <script src="./vendors/fontawesome/all.min.js"></script>
+</body>
+</html>
