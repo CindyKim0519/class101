@@ -1,7 +1,7 @@
 body {
     font-family: 'Pretendard', sans-serif;
     background: #F7F7F7;
-    color: #0C0C0C;
+    color: #212529;
     min-width: 1280px;
 }
 .header {
@@ -42,6 +42,11 @@ body {
 }
 .dark-gray-color {
     color: #373737 !important;
+}
+.table {
+    td{
+        color: #212529 !important;
+    }
 }
 .pagination-btn {
     display: flex;
